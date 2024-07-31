@@ -17,10 +17,16 @@ const upload = multer({ storage: storage });
 
 // Create MySQL connection 
 const connection = mysql.createConnection({ 
-    host: 'localhost', // Your host, usually localhost
-    user: 'root',  // Your username
-    password: '',  // Your password
-    database: 'medschool'  // Your database name
+    // host: 'localhost', // Your host, usually localhost
+    // user: 'root',  // Your username
+    // password: '',  // Your password
+    // database: 'medschool'  // Your database name
+
+
+    host: 'sql.freedb.tech', // Your host, usually localhost
+    user: 'freedb_Jason',  // Your username
+    password: 'np35u?@7Fp88QsV',  // Your password
+    database: 'freedb_medschool'  // Your database name
 });
 
 // Check MySQL connection
