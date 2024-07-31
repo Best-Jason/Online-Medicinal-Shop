@@ -23,10 +23,10 @@ const connection = mysql.createConnection({
     // database: 'medschool'  // Your database name
 
 
-    host: 'sql.freedb.tech', // Your host, usually localhost
-    user: 'freedb_Jason',  // Your username
-    password: 'np35u?@7Fp88QsV',  // Your password
-    database: 'freedb_medschool'  // Your database name
+    host: 'db4free.net', // Your host, usually localhost
+    user: 'jason1234',  // Your username
+    password: 'jason1234',  // Your password
+    database: 'medschool123'  // Your database name
 });
 
 // Check MySQL connection
@@ -109,6 +109,7 @@ app.post('/addProduct', upload.single('image'), (req, res) => {
     });
 });
 
+// retrieve first
 app.get('/editProduct/:id', (req, res) => {
     const productId = req.params.id;
     const sql = 'SELECT * FROM medtable WHERE productId = ?';
@@ -125,6 +126,8 @@ app.get('/editProduct/:id', (req, res) => {
     });
 });
 
+
+// post into database by updating
 app.post('/editProduct/:id', upload.single('image'), (req, res) => {
     const { name, quantity, price, existingImage } = req.body;
     const productId = req.params.id;
